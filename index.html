@@ -36,7 +36,7 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background: var(--white);
       line-height: 1.65;
@@ -299,10 +299,24 @@
       color: var(--muted);
     }
 
-    .contact {
-      background: var(--navy);
+    section.contact {
+      background:
+        radial-gradient(circle at 80% 15%, rgba(85, 184, 216, 0.18), transparent 25%),
+        linear-gradient(135deg, #07162c 0%, #0d2a4c 100%);
       color: var(--white);
     }
+
+    section.contact .section-heading h2,
+    section.contact .section-heading p,
+    section.contact .contact-card h3,
+    section.contact .contact-card p {
+    color: var(--white);
+    }
+
+    section.contact .contact-card {
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+   }
 
     .contact .section-heading h2,
     .contact .section-heading p {
@@ -324,6 +338,11 @@
 
     .contact-card h3 {
       margin-bottom: 12px;
+    }
+
+    .contact-card a {
+      color: #bfeaff;
+      font-weight: 700;
     }
 
     footer {
@@ -372,6 +391,8 @@
         <a href="#about">About</a>
         <a href="#services">Consulting</a>
         <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
         <a href="#company">QHS LLC</a>
         <a href="#contact">Contact</a>
       </div>
@@ -391,11 +412,10 @@
           </div>
 
           <p class="hero-text">
-            Board-certified medical physicist, quantum computing researcher,
-            healthcare innovation consultant, and founder of Quantum Health
-            Solutions LLC. My work connects clinical medical physics,
-            radiation oncology, proton therapy, artificial intelligence, and
-            quantum technologies.
+            Board-certified therapeutic medical physicist, quantum computing researcher,
+            scientific speaker, and founder of Quantum Health Solutions LLC.
+            My work connects clinical medical physics, proton therapy, radiation
+            oncology, artificial intelligence, and quantum-enabled optimization.
           </p>
 
           <div class="buttons">
@@ -403,8 +423,17 @@
               Explore Consulting Services
             </a>
 
-            <a class="button button-secondary" href="#contact">
-              Contact
+            <a class="button button-secondary" href="#research">
+              View Research
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="https://scholar.google.com/citations?user=5g3izZwAAAAJ&hl=en&oi=ao"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google Scholar
             </a>
           </div>
         </div>
@@ -599,6 +628,106 @@
       </div>
     </section>
 
+
+    <section id="publications">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Selected Publications</h2>
+          <p>
+            Recent work in quantum computing, proton therapy, clinical dosimetry,
+            and radiation oncology. The complete record is available on Google Scholar.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Quantum computing for radiation therapy optimization</h3>
+            <p><strong>Medical Physics, 2026.</strong> Quantum and hybrid optimization approaches for radiation therapy planning.</p>
+          </article>
+
+          <article class="card">
+            <h3>Benchmarking radiochromic EBT4 film for clinical proton dosimetry</h3>
+            <p><strong>International Journal of Particle Therapy, 2025.</strong> Clinical characterization of EBT4 film in proton dosimetry.</p>
+          </article>
+
+          <article class="card">
+            <h3>Fetal dose assessment in a pregnant patient with brain tumor</h3>
+            <p><strong>Journal of Applied Clinical Medical Physics, 2024.</strong> Comparison of proton PBS and photon techniques.</p>
+          </article>
+
+          <article class="card">
+            <h3>Patient-specific bolus and multi-leaf collimation</h3>
+            <p><strong>Radiological Physics and Technology, 2026.</strong> Strategies for improved conformity in superficial proton therapy.</p>
+          </article>
+
+          <article class="card">
+            <h3>Intermittent proton QA failures from detector miscalibration</h3>
+            <p><strong>Therapeutic Radiology and Oncology, 2026.</strong> Clinical investigation of calibration-related QA failures.</p>
+          </article>
+
+          <article class="card">
+            <h3>Good Clinical Proton Practice initiative</h3>
+            <p><strong>Journal of Applied Clinical Medical Physics, 2024.</strong> A collaborative effort to harmonize proton therapy standards.</p>
+          </article>
+        </div>
+
+        <div class="buttons" style="margin-top: 28px;">
+          <a
+            class="button button-primary"
+            href="https://scholar.google.com/citations?user=5g3izZwAAAAJ&hl=en&oi=ao"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Full Google Scholar Profile
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Selected Professional Journey</h2>
+          <p>
+            From quantum information science to clinical medical physics,
+            proton therapy, education, and healthcare innovation.
+          </p>
+        </div>
+
+        <div class="research-list">
+          <article class="research-item">
+            <h3>University of Maryland School of Medicine · 2024–2026</h3>
+            <p>Associate Professor of Radiation Oncology and medical physicist at the Maryland Proton Treatment Center.</p>
+          </article>
+
+          <article class="research-item">
+            <h3>Inova Schar Cancer Institute · 2019–2024</h3>
+            <p>Medical physicist with clinical, educational, workflow, and residency-program leadership responsibilities.</p>
+          </article>
+
+          <article class="research-item">
+            <h3>University of Miami · 2017–2019</h3>
+            <p>Medical physics residency training.</p>
+          </article>
+
+          <article class="research-item">
+            <h3>Institute for Quantum Computing, University of Waterloo · 2010–2015</h3>
+            <p>Postdoctoral research in quantum information processing and spin-based quantum systems.</p>
+          </article>
+
+          <article class="research-item">
+            <h3>Osaka University · 2003–2006</h3>
+            <p>PhD in quantum information devices, focused on entanglement in nuclear and electron spin systems.</p>
+          </article>
+
+          <article class="research-item">
+            <h3>Global Scientific Engagement</h3>
+            <p>Invited presentations and collaborations in the United States, Japan, Canada, Sweden, Singapore, and Europe.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="company">
       <div class="container">
         <div class="section-heading">
@@ -658,8 +787,19 @@
             <h3>Professional Inquiries</h3>
 
             <p>
-              Add your preferred professional email address here after the
-              website is published.
+              For consulting, clinical coverage, research collaboration,
+              speaking invitations, education, or industry partnerships.
+            </p>
+
+            <p>
+              <a
+                href="https://scholar.google.com/citations?user=5g3izZwAAAAJ&hl=en&oi=ao"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="color:#bfeaff;font-weight:700;"
+              >
+                View Google Scholar profile ↗
+              </a>
             </p>
           </div>
 
