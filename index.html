@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Robabeh Rahimi, PhD, DABR</title>
+
+  <meta
+    name="description"
+    content="Robabeh Rahimi, PhD, DABR — medical physicist, quantum computing researcher, healthcare innovation consultant, and founder of Quantum Health Solutions LLC."
+  />
+
+  <style>
+    :root {
+      --navy: #0b1f3a;
+      --blue: #1c5d99;
+      --light-blue: #eaf3fb;
+      --gold: #c9972b;
+      --text: #243447;
+      --muted: #607080;
+      --white: #ffffff;
+      --light: #f7f9fc;
+      --border: #dce4ec;
+      --shadow: 0 12px 30px rgba(11, 31, 58, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(28, 93, 153, 0.18), transparent 30%),
+        linear-gradient(135deg, #f8fbff 0%, #eef5fb 100%);
+      padding: 96px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      font-size: 0.85rem;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      line-height: 1.05;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .credentials {
+      font-size: 1.25rem;
+      color: var(--blue);
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero-text {
+      max-width: 720px;
+      font-size: 1.12rem;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 7px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .button-primary:hover {
+      background: var(--navy);
+      transform: translateY(-2px);
+    }
+
+    .button-secondary {
+      border: 2px solid var(--blue);
+      color: var(--blue);
+      background: var(--white);
+    }
+
+    .button-secondary:hover {
+      background: var(--light-blue);
+      transform: translateY(-2px);
+    }
+
+    .hero-card {
+      background: var(--white);
+      padding: 34px;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      border-top: 5px solid var(--gold);
+    }
+
+    .hero-card h2 {
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    section {
+      padding: 88px 0;
+    }
+
+    section:nth-of-type(even) {
+      background: var(--light);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 44px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 7px 20px rgba(11, 31, 58, 0.06);
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .about-grid p {
+      margin-bottom: 18px;
+      color: var(--muted);
+    }
+
+    .highlight-box {
+      background: var(--navy);
+      color: var(--white);
+      padding: 34px;
+      border-radius: 16px;
+    }
+
+    .highlight-box h3 {
+      margin-bottom: 16px;
+    }
+
+    .highlight-box ul {
+      padding-left: 20px;
+    }
+
+    .highlight-box li {
+      margin-bottom: 10px;
+    }
+
+    .research-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .research-item {
+      padding: 26px;
+      border-left: 5px solid var(--blue);
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(11, 31, 58, 0.05);
+    }
+
+    .research-item h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .research-item p {
+      color: var(--muted);
+    }
+
+    .contact {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .contact .section-heading h2,
+    .contact .section-heading p {
+      color: var(--white);
+    }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .contact-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 14px;
+      padding: 28px;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 12px;
+    }
+
+    footer {
+      background: #071529;
+      color: #dbe5ef;
+      text-align: center;
+      padding: 28px 16px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid,
+      .about-grid,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .cards,
+      .research-list {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 0;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+      <a href="#home" class="brand">Robabeh Rahimi, PhD, DABR</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Consulting</a>
+        <a href="#research">Research</a>
+        <a href="#company">QHS LLC</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Medical Physics · Quantum Technologies · Precision Oncology</div>
+
+          <h1>Robabeh Rahimi</h1>
+
+          <div class="credentials">
+            PhD, DABR
+          </div>
+
+          <p class="hero-text">
+            Board-certified medical physicist, quantum computing researcher,
+            healthcare innovation consultant, and founder of Quantum Health
+            Solutions LLC. My work connects clinical medical physics,
+            radiation oncology, proton therapy, artificial intelligence, and
+            quantum technologies.
+          </p>
+
+          <div class="buttons">
+            <a class="button button-primary" href="#services">
+              Explore Consulting Services
+            </a>
+
+            <a class="button button-secondary" href="#contact">
+              Contact
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h2>Quantum Health Solutions LLC</h2>
+
+          <p>
+            A Virginia consulting company supporting healthcare organizations,
+            research institutions, and industry partners.
+          </p>
+
+          <p>
+            Areas of focus include clinical medical physics, radiation
+            oncology, proton therapy, quantum optimization, research
+            collaboration, education, and healthcare innovation.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About</h2>
+
+          <p>
+            Clinical experience, academic research, scientific leadership,
+            and technology innovation.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <p>
+              I am a board-certified therapeutic medical physicist with
+              experience in proton therapy, radiation oncology quality
+              assurance, clinical operations, education, research, and
+              healthcare technology.
+            </p>
+
+            <p>
+              My research focuses on the application of quantum computing and
+              advanced optimization methods to radiation therapy, including
+              treatment planning, adaptive therapy, clinical workflow
+              optimization, and precision oncology.
+            </p>
+
+            <p>
+              I collaborate with clinicians, physicists, academic institutions,
+              technology companies, and research organizations to translate
+              innovative ideas into practical healthcare solutions.
+            </p>
+          </div>
+
+          <div class="highlight-box">
+            <h3>Professional Focus</h3>
+
+            <ul>
+              <li>Clinical medical physics and radiation oncology</li>
+              <li>Proton therapy and treatment optimization</li>
+              <li>Quantum computing for healthcare</li>
+              <li>Artificial intelligence and workflow innovation</li>
+              <li>Research collaboration and grant development</li>
+              <li>Education, speaking, and scientific leadership</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Consulting Services</h2>
+
+          <p>
+            Professional support for hospitals, healthcare organizations,
+            universities, research teams, and technology companies.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Clinical Medical Physics</h3>
+
+            <p>
+              PRN medical physics coverage, clinical support, quality
+              assurance, program evaluation, and radiation oncology workflow
+              consulting.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Proton Therapy</h3>
+
+            <p>
+              Proton therapy operations, treatment planning, commissioning,
+              quality improvement, clinical implementation, and research
+              collaboration.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Quantum Technologies</h3>
+
+            <p>
+              Quantum optimization, quantum-inspired methods, healthcare use
+              cases, strategic planning, education, and research development.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Research Collaboration</h3>
+
+            <p>
+              Scientific project development, study design, multidisciplinary
+              collaboration, publications, presentations, and grant support.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Education and Training</h3>
+
+            <p>
+              Lectures, workshops, residency education, scientific seminars,
+              professional development, and customized training programs.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Healthcare Innovation</h3>
+
+            <p>
+              Evaluation of emerging technologies, clinical workflow
+              improvement, AI strategy, optimization, and industry advisory
+              services.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Research Areas</h2>
+
+          <p>
+            Translational research at the intersection of physics, computing,
+            oncology, and clinical care.
+          </p>
+        </div>
+
+        <div class="research-list">
+          <article class="research-item">
+            <h3>Quantum Optimization for Radiation Therapy</h3>
+
+            <p>
+              Hybrid quantum-classical approaches for treatment planning,
+              adaptive radiation therapy, and clinical decision support.
+            </p>
+          </article>
+
+          <article class="research-item">
+            <h3>Proton Therapy Innovation</h3>
+
+            <p>
+              Treatment delivery, quality assurance, workflow optimization,
+              adaptive therapy, and next-generation proton therapy methods.
+            </p>
+          </article>
+
+          <article class="research-item">
+            <h3>Healthcare Scheduling and Operations</h3>
+
+            <p>
+              Optimization of patient scheduling, resource allocation,
+              treatment-room utilization, and clinical efficiency.
+            </p>
+          </article>
+
+          <article class="research-item">
+            <h3>FLASH and Advanced Radiation Biology</h3>
+
+            <p>
+              Investigation of physical and biological models relevant to
+              ultra-high-dose-rate radiation therapy.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="company">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Quantum Health Solutions LLC</h2>
+
+          <p>
+            A platform for professional consulting, clinical services,
+            scientific collaboration, education, and healthcare innovation.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <p>
+              Quantum Health Solutions LLC supports organizations seeking
+              expertise in medical physics, radiation oncology, proton therapy,
+              quantum computing, artificial intelligence, and advanced
+              healthcare technology.
+            </p>
+
+            <p>
+              Engagements may include clinical PRN services, advisory support,
+              research collaboration, education, program development, invited
+              lectures, and strategic technology evaluation.
+            </p>
+          </div>
+
+          <div class="highlight-box">
+            <h3>Engagement Types</h3>
+
+            <ul>
+              <li>PRN clinical medical physics services</li>
+              <li>Hospital and health-system consulting</li>
+              <li>Academic and industry research collaboration</li>
+              <li>Technology advisory services</li>
+              <li>Scientific workshops and invited presentations</li>
+              <li>Customized education and training</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Contact</h2>
+
+          <p>
+            For consulting, clinical coverage, research collaboration,
+            speaking, or educational inquiries.
+          </p>
+        </div>
+
+        <div class="contact-box">
+          <div class="contact-card">
+            <h3>Professional Inquiries</h3>
+
+            <p>
+              Add your preferred professional email address here after the
+              website is published.
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Quantum Health Solutions LLC</h3>
+
+            <p>
+              Virginia, United States
+            </p>
+
+            <p>
+              Consulting services are provided through Quantum Health
+              Solutions LLC.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Robabeh Rahimi. Consulting services provided through
+    Quantum Health Solutions LLC.
+  </footer>
+</body>
+</html>
